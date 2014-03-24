@@ -286,39 +286,46 @@ body {
 @media (max-width: 1400px) {
 
 body {
-  zoom: 0.9; 
-}
+    zoom: 0.9; 
+  }
 
 #footer, #sidebar-wrapper, #page-content-wrapper p {
-  zoom: 0.9; 
-}
+    zoom: 0.9; 
+  }
 
 .top-right {
-  width: 74% !important;
-}
+    width: 74% !important;
+  }
 
 #wrapper {
-  padding-right: 288px !important;
-}
+    padding-right: 288px !important;
+  }
 
 #busqueda{
-	margin-left:5%;
-	width: 89%;
-	/*width: -moz-calc(86% - 50px);
-	width: -webkit-calc(86% - 50px);
-	width: -o-calc(86% - 50px);
-	width: calc(86% - 50px);*/
-	height:54px;
-	max-width:315px;
-	font-family: 'Roboto', sans-serif;
-  	font-weight:300;
-  	font-size:14px;
-	border-color:#004fa2; 
-	border-width:2px; 
-	border-style:solid; 
-	background:url('../img/simbolos-15.png') left top no-repeat;
-    padding-left: 55px;
-}
+  	margin-left:5%;
+  	width: 89%;
+  	/*width: -moz-calc(86% - 50px);
+  	width: -webkit-calc(86% - 50px);
+  	width: -o-calc(86% - 50px);
+  	width: calc(86% - 50px);*/
+  	height:54px;
+  	max-width:315px;
+  	font-family: 'Roboto', sans-serif;
+    	font-weight:300;
+    	font-size:14px;
+  	border-color:#004fa2; 
+  	border-width:2px; 
+  	border-style:solid; 
+  	background:url('../img/simbolos-15.png') left top no-repeat;
+      padding-left: 55px;
+  }
+
+  #mapIMG {
+    width: auto !important;
+    max-width: 1160px !important;
+    height: auto !important;
+    max-height: 600px !important;
+  }
 }
 
 @media (min-width: 1400px) {
@@ -344,6 +351,15 @@ body {
 	.elements {
 		width: 107px !important;
 	}
+}
+
+@media (max-width: 1400px) {
+
+
+#footer, #header, #sidebar-wrapper, #page-content-wrapper p {
+    zoom: 0.5 !important; 
+  }
+
 }
 
 .element {
@@ -392,7 +408,7 @@ body {
 	/*height: 920px;*/
 	width: 100%;
 	max-width: 100%;
-	background-color: #f4f5f7;
+	background-color: #f1f1f1;
 }
 
 #map-img {
@@ -764,5 +780,9 @@ header {
 #page-content-wrapper p {
   text-align: center;
   margin: 50px 50px 0;
+}
+
+#mapster_wrap_0 {
+  margin: 0 auto;
 }
 
