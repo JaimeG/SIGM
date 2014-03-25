@@ -353,11 +353,32 @@ body {
 	}
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 1024px) {
 
 
-#footer, #header, #sidebar-wrapper, #page-content-wrapper p {
-    zoom: 0.5 !important; 
+  #footer, #header, #page-content-wrapper p {
+      zoom: 0.5 !important; 
+    }
+
+  #sidebar-wrapper {
+    zoom: 0.7 !important; 
+  }
+
+  .numero_catastro, .municipio {
+    font-size: 9px !important;
+  }
+
+  body {
+    padding-top: 10px !important;
+    padding-bottom: 0px !important;
+  }
+
+  #wrapper {
+    padding-right: 250px !important;
+  }
+
+  #contenido-map {
+    padding-top: 50px !important;
   }
 
 }
