@@ -31,52 +31,50 @@
           <!-- Sidebar -->
           <div id="sidebar-wrapper">
               <img src="img/sigm-2.png" width="89%" style="margin-left:5%; margin-right:6%; margin-top:7%; max-width:335px;">
+                
+                <div id="mun-btn-rg">
+                  <div id="ui-boton-masinfo">
+                        <a href="0801-info.html" class="texto-boton"><span 
+                      style="
+                      display: inline-block;
+                      height: 100%;
+                      vertical-align: middle;"></span><img src="img/simbolo-masinfo.png" style="width:90%; vertical-align: middle;"></a>    
+                  </div>
 
-                <div id="ui-boton-masinfo">
-                      <a href="0801-info.html" class="texto-boton"><span 
-                    style="
-                    display: inline-block;
-                    height: 100%;
-                    vertical-align: middle;"></span><img src="img/simbolo-masinfo.png" style="width:90%; vertical-align: middle;"></a>    
+                  <div class="ui-boton">
+                        <a href="index.html" class="texto-boton"><center><img src="img/simbolo-atras-doble.png" style="width:90%; height:90%; margin-top:5px;"></center></a>    
+                  </div>
+
+                  <div class="ui-boton">
+                        <a href="lapaz.html" class="texto-boton"><center><img src="img/simbolo-atras-simple-1.png" style="width:90%; height:90%; margin-top:5px;"></center></a>    
+                  </div>
+                  <div class="ui-boton" id="ayuda-boton">
+                    <a id="link_ayuda" href="ayuda.html">
+                      <img src="img/ayuda.png" tyle="width:90%; height:90%; margin-top:5px;">
+                      Ayuda</a>   
+                  </div>
                 </div>
 
-                <div id="ui-boton">
-                      <a href="index.html" class="texto-boton"><center><img src="img/simbolo-atras-doble.png" style="width:90%; height:90%; margin-top:5px;"></center></a>    
-                </div>
 
-                <div id="ui-boton">
-                      <a href="lapaz.html" class="texto-boton"><center><img src="img/simbolo-atras-simple-1.png" style="width:90%; height:90%; margin-top:5px;"></center></a>    
-                </div>
                 
           </div>
 
           <!-- Page content -->
           <div id="page-content-wrapper">
-              <div id="contenido-map" style="display:inline-block;">
+              <div id="contenido-map" style="display:block;">
 
-                <center>
-                  <img src="img/mapa_0801.png" style="width:100%; max-height:82.5%; max-width:1160px;">
-                </center>
+                 <img src="img/zacatecoluca.jpg" usemap="#usa">
+                 <map id="usa_image_map" name="usa">
+                 </map>
 
               </div>
           </div>
 
         </div>
 
-        <nav class="navbar navbar-default navbar-fixed-bottom" id="footer" role="navigation">
+        <nav class="navbar navbar-default navbar-fixed-bottom" id="footerMun" role="navigation">
           <div class="container-fluid">
-            <div id="franjaFooter">
-              <div id="azul_footer"></div>
-              <div id="texto_footer">
-                Por favor, seleccione el Departamento del cual desea obtener mayor información.
-              </div>
-              <div id="espacio_ayuda_footer">
-                <div id="espacio_ayuda_footer">
-                  <img src="img/ayuda.png" style="margin-bottom:-13px;">
-                    <a id="link_ayuda" href="#">Ayuda</a>
-                </div>
-              </div>
-            </div>
+            <div id="franjaFooterMun"></div>
             <div id="copy-footer">Copyright ©, Sistema de Información de la Gestión Municipal, 2014</div>
             <div id="logoFooter">
               <img src="img/sigm.png" alt="">
@@ -93,16 +91,66 @@
         <script type='text/javascript' src='js/jquery.imagemapster.js'></script>
         <script type='text/javascript' src='js/jquery.isotope.min.js'></script>
 
-        <script>
-          $(function(){
+        <script type='text/javascript'>//<![CDATA[ 
+        $(window).load(function(){
+        var resizeTime = 100;     // total duration of the resize effect, 0 is instant
+        var resizeDelay = 100;    // time to wait before checking the window size again
+                                  // the shorter the time, the more reactive it will be.
+                                  // short or 0 times could cause problems with old browsers.
+
+                                  
+        $('img').mapster({
+            mapKey: 'state',
+          clickNavigate: true,
+          scaleMap:true,
+        });
+
+        // Resize the map to fit within the boundaries provided
+
+        function resize(maxWidth,maxHeight) {
+             var image =  $('img'),
+                imgWidth = image.width(),
+                imgHeight = image.height(),
+                newWidth=0,
+                newHeight=0;
+
+            if (imgWidth/maxWidth>imgHeight/maxHeight) {
+                newWidth = maxWidth;
+            } else {
+                newHeight = maxHeight;
+            }
+            image.mapster('resize',newWidth,newHeight,resizeTime);   
+        }
+
+        // Track window resizing events, but only actually call the map resize when the
+        // window isn't being resized any more
+
+        function onWindowResize() {
             
-            var $container = $('#catastro');
-            
-            $container.isotope({
-              itemSelector: '.element'
-            });
-            
-          });
+            var curWidth = $(window).width()*0.75,
+                curHeight = $(window).height()*0.75,
+                checking=false;
+            if (checking) {
+                return;
+                    }
+            checking = true;
+            window.setTimeout(function() {
+                var newWidth = $(window).width()*0.75,
+                   newHeight = $(window).height()*0.75;
+                if (newWidth === curWidth &&
+                    newHeight === curHeight) {
+                    resize(newWidth,newHeight); 
+                }
+                checking=false;
+            },resizeDelay );
+        }
+
+        $(window).bind('resize',onWindowResize);
+        $(window).load('resize',onWindowResize);
+
+
+        });//]]>  
+
         </script>
 
 
