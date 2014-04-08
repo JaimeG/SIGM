@@ -17,7 +17,7 @@
 	width: 360px;
 	background: #fff;
 	position: fixed;
-	height: 90%;
+	height: 100%;
 	overflow-y: auto;
 	z-index: 1000;
 	border-left: 5px solid #03519f;
@@ -83,6 +83,10 @@ body {
   line-height: 65px;
 }
 
+#signin {
+  width: 500px;
+}
+
 .content-header h1 {
   margin: 0;
   margin-left: 20px;
@@ -92,6 +96,17 @@ body {
 
 #menu-toggle {
   display: none;
+}
+
+#titulo-dep {
+    z-index: 100000000;
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    font-size: 50px;
+    font-weight: 300;
+    text-align: right;
+    line-height: 1;
 }
 
 .inset {
@@ -241,23 +256,27 @@ body {
 
 #ui-tipayuda {
   width: 89%;
-  max-width:325px;
-  margin-top: 30%;
+  max-width: 325px;
+  margin-top: 16%;
   height: 55px;
-  margin-left:5%;
-  display:table;
+  margin-left: 5%;
+  display: table;
   overflow: hidden;
   position: relative;
-  background: #b9493e;
-  color: white;
+  background: #F0F0F0;
+  color: #000;
   font-family: 'Roboto', sans-serif;
-  font-weight:300;
-  font-size:12px;
-  text-align:center;
-  padding:15px;
+  font-weight: 300;
+  font-size: 12px;
+  text-align: center;
+  padding: 15px;
   -webkit-hyphens: auto;
-     -moz-hyphens: auto;
-          hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
+}
+
+#overlay {
+  height: auto;
 }
 
 #arrow-down {
@@ -265,7 +284,7 @@ body {
 	height: 0; 
 	border-left: 15px solid transparent;
 	border-right: 15px solid transparent;
-	border-top: 15px solid #b9493e;
+	border-top: 15px solid #F0F0F0;
 	margin-left:7%;
 }
 
@@ -305,11 +324,17 @@ body {
   }
 
 #footer, #sidebar-wrapper, #sidebar-wrapper-info, #page-content-wrapper p {
-    zoom: 0.9; 
+    zoom: 0.8; 
   }
 
 #sidebar-wrapper {
-  height: 88% !important;
+  height: 100% !important;
+  min-height: 860px;
+  /*overflow-y: scroll;*/
+}
+
+#overlay {
+  height: 1000px;
 }
 
 #titulo-departamento, #ds-departamento {
@@ -317,12 +342,12 @@ body {
 }
 
 #mapster_wrap_0 {
-  zoom: 0.95 !important;
+  zoom: 1 !important;
 }
 
 
 .top-right {
-    width: 62% !important;
+    width: 63% !important;
   }
 
 #wrapper {
@@ -365,7 +390,7 @@ body {
 	width: -o-calc(86% - 50px);
 	width: calc(86% - 50px);*/
 	height:54px;
-  margin-top: 15px;
+  margin-top: 5px;
 	max-width: 315px !important;
 	font-family: 'Roboto', sans-serif;
   	font-weight:300;
@@ -382,11 +407,18 @@ body {
 	}
 }
 
+@media (max-width: 1300px) {
+  .top-right {
+width: 78% !important;
+}
+
+}
+
 @media (max-width: 1024px) {
 
 
-  #footer, #header, #page-content-wrapper p {
-      zoom: 0.5 !important; 
+  #footer, #header, #page-content-wrapper p, #footerMun {
+      zoom: 0.7 !important; 
     }
 
     .top-right {
@@ -394,8 +426,9 @@ body {
       zoom: 0.8;
     }
 
-  #sidebar-wrapper {
+  #sidebar-wrapper, #sidebar-wrapper-info {
     zoom: 0.7 !important; 
+    height: 100% !important;
   }
 
   .numero_catastro, .municipio {
@@ -439,7 +472,7 @@ body {
 
 #titulo-departamento {
   padding: 15px;
-  background: #dda334;
+  background: #2980b9;
   color: #fff;
   margin: 15px 15px 0;
   font-size: 15px;
@@ -447,7 +480,7 @@ body {
 
 #ds-departamento {
   padding: 15px;
-  background-color: #c6922f;
+  background-color: #2573a8;
   color: #fff;
   margin:  0 15px 15px ;
   font-size: 15px;
@@ -515,7 +548,7 @@ body {
 
 @media (min-width: 1000px) {
   .element_info {
-  width: 23%;
+  width: 24%;
   height: 35%;
   min-height:140px;
   margin: 0.3%;
@@ -534,7 +567,7 @@ body {
 
 @media (min-width: 1400px) {
 .element_info {
-  width: 23%;
+  width: 24%;
   height: 35%;
   min-height:190px;
   margin: 0.3%;
@@ -553,7 +586,7 @@ body {
 
 @media (min-width: 1800px) {
 .element_info {
-  width: 23%;
+  width: 24%;
   height: 35%;
   min-height:230px;
   margin: 0.3%;
@@ -706,7 +739,7 @@ body {
 }
 
 #nombre_municipio{
-  font-size: 18px;
+  font-size: 25px;
   font-weight:400;
   color: #6d6f70;
   font-family: 'Roboto', sans-serif;
@@ -792,6 +825,7 @@ body {
   display: inline;
   width: 59%;
   margin-top: 20px;
+  display: inline-flex;
 }
 
 header {
@@ -824,7 +858,7 @@ header {
 }
 
 #headerLogo{
-  margin-left: 5%;
+  margin-left: 2%;
   max-width: 220px;
   padding: 8px 0;
   float: left;
@@ -870,7 +904,7 @@ header {
 
 #mun-btn-rg {
   position: absolute;
-  bottom: 50px;
+  bottom: 171px;
   width: 100%;
 }
 

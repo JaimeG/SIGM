@@ -30,6 +30,7 @@
           
           <!-- Sidebar -->
           <div id="sidebar-wrapper">
+            <div id="overlay">
               <img src="img/sigm-2.png" width="89%" style="margin-left:5%; margin-right:6%; margin-top:7%; max-width:335px;">
                 
                 <div id="mun-btn-rg">
@@ -54,6 +55,7 @@
                       Ayuda</a>   
                   </div>
                 </div>
+              </div>
 
 
                 
@@ -63,7 +65,7 @@
           <div id="page-content-wrapper">
               <div id="contenido-map" style="display:block;">
 
-                 <img src="img/pantalla_1920x1080_usulutan_CO-03.jpg" usemap="#usa">
+                 <img src="img/zacatecoluca.jpg" usemap="#usa">
                  <map id="usa_image_map" name="usa">
                  </map>
 
@@ -127,16 +129,16 @@
 
         function onWindowResize() {
             
-            var curWidth = $(window).width()*0.75,
-                curHeight = $(window).height()*0.75,
+            var curWidth = $(window).width()*0.80,
+                curHeight = $(window).height()*0.80,
                 checking=false;
             if (checking) {
                 return;
                     }
             checking = true;
             window.setTimeout(function() {
-                var newWidth = $(window).width()*0.75,
-                   newHeight = $(window).height()*0.75;
+                var newWidth = $(window).width()*0.80,
+                   newHeight = $(window).height()*0.80;
                 if (newWidth === curWidth &&
                     newHeight === curHeight) {
                     resize(newWidth,newHeight); 

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>SIGM // PAGINA PRINCIPAL</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+        <link href="http://fonts.googleapis.com/css?family=Roboto:400,300" rel="stylesheet" type="text/css">
+
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/main.css">
+
+        <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+        
+          <nav class="navbar navbar-default navbar-fixed-top" id="header">
+
+          </nav>
+
+         <div id="wrapper-fullwidth">
+
+            <!-- Page content -->
+            <div id="page-content-wrapper">
+              <div id="contenido-map">
+                  <div class="container" id="signin">
+
+                    <form class="form-signin" role="form">
+                      <h2 class="form-signin-heading">Please sign in</h2>
+                      <input type="email" class="form-control" placeholder="Email address" required autofocus>
+                      <input type="password" class="form-control" placeholder="Password" required>
+                      <label class="checkbox">
+                        <input type="checkbox" value="remember-me"> Recordarme
+                      </label>
+                      <button class="btn btn-lg btn-primary btn-block" type="submit">Ingresar</button>
+                    </form>
+
+                  </div> <!-- /container -->
+              </div>
+          </div>
+
+        </div>
+
+        <nav class="navbar navbar-default navbar-fixed-bottom" id="footer" role="navigation">
+          <div class="container-fluid">
+            <div id="franjaFooter">
+              <div id="azul_footer"></div>
+              <div id="texto_footer">
+                Por favor, seleccione el Departamento del cual desea obtener mayor información.
+              </div>
+              <div id="espacio_ayuda_footer">
+                <div id="espacio_ayuda_footer">
+                  <img src="img/ayuda.png" style="margin-bottom:-13px;">
+                    <a id="link_ayuda" href="#">Ayuda</a>
+                </div>
+              </div>
+            </div>
+            <div id="copy-footer">Copyright ©, Sistema de Información de la Gestión Municipal, 2014</div>
+            <div id="logoFooter">
+              <img src="img/sigm.png" alt="">
+            </div>
+          </div>
+        </nav>
+      
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
+
+        <script src="js/vendor/bootstrap.min.js"></script>
+        <script type='text/javascript' src='js/jquery.imagemapster.js'></script>
+
+        <script src="js/main.js"></script>
+        
+        <script type='text/javascript'>//<![CDATA[ 
+        $(window).load(function(){
+          var resizeTime = 100;     // total duration of the resize effect, 0 is instant
+          var resizeDelay = 100;    // time to wait before checking the window size again
+                                    // the shorter the time, the more reactive it will be.
+                                    // short or 0 times could cause problems with old browsers.
+
+                                    
+          $('img').mapster({
+              mapKey: 'state',
+              clickNavigate: true,
+              scaleMap:true,
+          });
+
+          // Resize the map to fit within the boundaries provided
+
+          function resize(maxWidth,maxHeight) {
+               var image =  $('img'),
+                  imgWidth = image.width(),
+                  imgHeight = image.height(),
+                  newWidth=0,
+                  newHeight=0;
+
+              if (imgWidth/maxWidth>imgHeight/maxHeight) {
+                  newWidth = maxWidth;
+              } else {
+                  newHeight = maxHeight;
+              }
+              image.mapster('resize',newWidth,newHeight,resizeTime);   
+          }
+
+          // Track window resizing events, but only actually call the map resize when the
+          // window isn't being resized any more
+
+          function onWindowResize() {
+              
+              var curWidth = $(window).width()*1.0,
+                  curHeight = $(window).height()*0.85,
+                  checking=false;
+              if (checking) {
+                  return;
+                      }
+              checking = true;
+              window.setTimeout(function() {
+                  var newWidth = $(window).width()*1.0,
+                     newHeight = $(window).height()*0.85;
+                  if (newWidth === curWidth &&
+                      newHeight === curHeight) {
+                      resize(newWidth,newHeight); 
+                  }
+                  checking=false;
+              },resizeDelay );
+          }
+
+          $(window).bind('resize',onWindowResize);
+          $(window).load('resize',onWindowResize);
+        });//]]>  
+
+        </script>
+
+
+        <script>
+            // var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+            // (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            // g.src='//www.google-analytics.com/ga.js';
+            // s.parentNode.insertBefore(g,s)}(document,'script'));
+        </script>
+    </body>
+</html>
