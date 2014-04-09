@@ -890,8 +890,16 @@ header {
 }
 
 #page-content-wrapper p {
-  text-align: center;
-  margin: 50px 50px 0;
+  text-align: left;
+  margin: 0 50px 0;
+}
+
+.titulo-poblacion {
+  margin-left: 40px;
+  color: #0070ca;
+  margin-top: 0;
+  padding-top: 20px;
+
 }
 
 #mapster_wrap_0 {
@@ -901,6 +909,11 @@ header {
   position: absolute !important;
   top: 0; left: 0; right: 0;
 
+}
+
+#page-content-wrapper span {
+  font-weight: bold;
+  font-size: 26px;
 }
 
 #mun-btn-rg {
@@ -932,9 +945,12 @@ header {
 #menu-pr-bt {
   width: 100%;
   margin-top: 50px;
-  bottom: 73px;
+  bottom: 65px;
+  padding-right: 360px;
   margin-bottom: 0;
   position: fixed;
+  background: #ccc;
+  height: 50px;
 }
 
 #sidebar-wrapper-info {
@@ -943,10 +959,16 @@ header {
   width: 360px;
   background: #fff;
   position: absolute;
-  height: 90%;
+  height: 85%;
   overflow-y: auto;
   z-index: 1000;
   border-left: 5px solid #03519f;
+}
+
+#center-menu-pr {
+  width: 480px;
+  margin: 0 auto;
+  margin-top: 6px;
 }
 
 #page-content-wrapper-info {
