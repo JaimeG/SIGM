@@ -30,6 +30,7 @@
 body {
     padding-top: 35px;
     padding-bottom: 120px;
+    
 }
 
 .sidebar-nav {
@@ -320,7 +321,7 @@ body {
   }
 
   #page-content-wrapper-info, #menu-pr-bt {
-    width: 94% !important;
+    padding-right: 287px;
   }
 
 #footer, #sidebar-wrapper, #sidebar-wrapper-info, #page-content-wrapper p {
@@ -931,6 +932,9 @@ header {
 #menu-pr-bt {
   width: 100%;
   margin-top: 50px;
+  bottom: 73px;
+  margin-bottom: 0;
+  position: fixed;
 }
 
 #sidebar-wrapper-info {
