@@ -352,7 +352,7 @@ body {
 
 
 .top-right {
-    width: 63% !important;
+    width: 70% !important;
   }
 
 #wrapper {
@@ -427,7 +427,8 @@ width: 78% !important;
     }
 
     .top-right {
-      width: 70% !important;
+      width: 75% !important;
+      margin-top: 22px !important;
       zoom: 0.8;
     }
 
@@ -440,6 +441,11 @@ width: 78% !important;
     font-size: 9px !important;
   }
 
+  #page-content-wrapper {
+width: 100%;
+margin-top: 25px;
+    }
+
   body {
     padding-top: 10px !important;
     padding-bottom: 0px !important;
@@ -451,6 +457,11 @@ width: 78% !important;
 
   #contenido-map {
     padding-top: 50px !important;
+  }
+
+  #menu-pr-bt {
+    zoom: 0.8;
+    height: 79px !important;
   }
 
 }
@@ -499,7 +510,7 @@ width: 78% !important;
 .element .municipio {
   left: 0.25em;
   bottom: 0.25em;
-  font-size: 14px;
+  font-size: 17px;
   font-weight:300;
 }
 
@@ -808,9 +819,8 @@ width: 78% !important;
 
 .ui-boton-top {
   width: 89%;
-  max-width: 230px;
+  max-width: 265px;
   height: 20%;
-  mah-height: 200px;
   margin-left: 0.5%;
   text-align: center;
   overflow: hidden;
@@ -822,15 +832,19 @@ width: 78% !important;
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
   hyphens: auto;
+  padding: 5px;
   float: left;
+}
+
+.ui-boton-top a {
+  color: #fff;
 }
 
 .top-right {
   float: right;
   display: inline;
   width: 59%;
-  margin-top: 20px;
-  display: inline-flex;
+  margin-top: 14px;
 }
 
 header {
@@ -843,10 +857,21 @@ header {
 
 #espacio_ayuda {
   background-color: #00adee;
-  display: inline-block;
   width: 200px;
   height: 40px;
   margin-left: 0.5%;
+  border-left-color: white;
+  border-left-width: 1px;
+  border-left-style: solid;
+}
+
+#espacio_ayuda_top {
+   background-color: #00adee;
+    display: inline-block;
+  width: 200px;
+  height: 51px;
+  margin-left: 0.5%;
+  padding-top: 5px;
   border-left-color: white;
   border-left-width: 1px;
   border-left-style: solid;
@@ -955,7 +980,7 @@ header {
   margin-bottom: 0;
   position: fixed;
   background: #ccc;
-  height: 50px;
+  height: 65px;
 }
 
 #sidebar-wrapper-info {
@@ -971,9 +996,10 @@ header {
 }
 
 #center-menu-pr {
-  width: 480px;
+  width: 548px;
   margin: 0 auto;
   margin-top: 6px;
+
 }
 
 #page-content-wrapper-info {
