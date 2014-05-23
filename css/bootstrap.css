@@ -41,13 +41,19 @@ audio:not([controls]) {
 }
 
 html {
-  font-family: sans-serif;
+  
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
+      font-family: 'Open Sans' !important;
+    font-style: normal;
+    font-weight: 300;
 }
 
 body {
   margin: 0;
+  font-family: 'Open Sans' !important;
+    font-style: normal;
+    font-weight: 300;
 }
 
 a:focus {
@@ -92,7 +98,7 @@ code,
 kbd,
 pre,
 samp {
-  font-family: monospace, serif;
+  
   font-size: 1em;
 }
 
@@ -300,12 +306,10 @@ html {
 }
 
 body {
-  /*font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;*/
-  font-family: 'Roboto', sans-serif;
   font-size: 18px;
   line-height: 1.428571429;
   color: #333333;
-  background-color: #f4f5f7;
+  background-color: #f1f1f1;
 }
 
 input,
@@ -463,7 +467,7 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  
   font-weight: 500;
   line-height: 1.1;
 }
@@ -702,7 +706,7 @@ address {
 
 code,
 pre {
-  font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+  
 }
 
 code {
@@ -2385,16 +2389,18 @@ input[type="button"].btn-block {
 }
 
 @font-face {
-  font-family: 'Glyphicons Halflings';
+  
+  /*
   src: url('../fonts/glyphicons-halflings-regular.eot');
   src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
+  */
 }
 
 .glyphicon {
   position: relative;
   top: 1px;
   display: inline-block;
-  font-family: 'Glyphicons Halflings';
+  
   -webkit-font-smoothing: antialiased;
   font-style: normal;
   font-weight: normal;
@@ -6116,7 +6122,6 @@ body.modal-open,
   height: 20px;
   margin-top: -10px;
   margin-left: -10px;
-  font-family: serif;
 }
 
 .carousel-control .icon-prev:before {

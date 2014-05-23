@@ -1,0 +1,134 @@
+.admin-cont {
+	margin-top: 75px;
+	margin-bottom: 90px;
+}
+
+div.col-md-3.admin {
+	
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	background-color: #eef2f5;
+}
+
+ul, ol {
+	margin-top: 0;
+	margin-bottom: 10px;
+	list-style: none;
+	padding: 0 19px;
+}
+
+div.titulo-admin {
+	font-size: 16px;
+	background: #004fa2;
+	height: 57px;
+	color: #fff;
+	margin-bottom: 15px;
+	padding: 5px 19px;
+}
+
+.admin {
+	border: 1px solid #ccc;
+	min-height: 170px;
+	margin-bottom: 10px;
+}
+
+.navbar-inverse {
+	background-color: #c8d4d5;
+	border-color: #004fa2;
+	border-width: 0 0 3px;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+	color: #000;
+}
+
+li.admin-user {
+	margin-top: 13px;
+	font-size: 17px;
+	color: #fff;
+}
+
+ul#double li {
+    float:left; width:50%;
+}
+
+#footerMun {
+	height: 85px;
+	background-color: #c8d4d5;
+}
+
+#logoFooter {
+	float: right;
+	margin-right: 25px;
+	margin-top: 10px;
+	display: inline;
+}
+
+#copy-footer {
+	display: inline;
+	margin-left: 80px;
+	position: absolute;
+	bottom: 0;
+	font-size: 12px;
+}
+
+html, body, .sign-in-container{
+    height: 100%;
+}
+.sign-in-container{
+	width: 100%;
+    display: table;
+    vertical-align: middle;
+}
+.vertical-center-row{
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#logo-sign {
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 20px;
+}
+
+#cont-sign {
+	background: #ccc;
+	padding: 35px;
+	width: 25%;
+	margin: 0 auto;
+}
+
+#header {
+	background-color: #014fa2;
+	border-bottom: 15px solid #004187;
+}
+
+#salir a {
+	color: #fff;
+	background: #004187;
+	padding: 15px;
+}
+
+/*Error 404*/
+
+#error404 {
+	font-size: 75px;
+	font-weight: bold;
+	color: #db2931;
+	line-height: 1;
+}
+
+#error-pagina {
+	font-size: 24px;
+	margin-bottom: 25px;
+}
+
+#cont-error {
+	background: #fff;
+	padding: 35px;
+	width: 25%;
+	margin: 0 auto;
+}
